@@ -49,7 +49,7 @@ export default defineConfig({
       {
         find: /@\/services\/((?!.*[.](ts|js|tsx|jsx|vue)$).*$)/,
         replacement: fileURLToPath(
-          new URL("./src/services/$1/index.ts", import.meta.url)
+          new URL("./src/services/$1/index.js", import.meta.url)
         ),
       },
     ],

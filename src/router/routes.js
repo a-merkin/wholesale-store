@@ -1,5 +1,6 @@
 import CustomerPage from "@/pages/CustomerPage.vue";
 import PurchasePage from "@/pages/PurchasePage.vue";
+import MainPage from "@/pages/MainPage.vue";
 
 const routes = [
   {
