@@ -1,5 +1,8 @@
 <script setup>
 import { ModalsContainer } from "vue-final-modal";
+import router from "@/router";
+
+router.push("/customer-list");
 </script>
 
 <template>

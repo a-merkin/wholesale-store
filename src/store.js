@@ -9,6 +9,7 @@ export const useStore = defineStore("store", {
         inn: "1232131231",
         kpp: "12313123123",
         ogrn: "123123213",
+        purchases: [],
       },
       {
         id: 2,
@@ -16,6 +17,7 @@ export const useStore = defineStore("store", {
         inn: "1232131231",
         kpp: "12313123123",
         ogrn: "123123213",
+        purchases: [4],
       },
       {
         id: 3,
@@ -23,6 +25,7 @@ export const useStore = defineStore("store", {
         inn: "1232131231",
         kpp: "12313123123",
         ogrn: "123123213",
+        purchases: [2],
       },
       {
         id: 4,
@@ -30,6 +33,7 @@ export const useStore = defineStore("store", {
         inn: "1232131231",
         kpp: "12313123123",
         ogrn: "123123213",
+        purchases: [0, 3],
       },
     ],
     purchases: [
@@ -64,6 +68,14 @@ export const useStore = defineStore("store", {
         code: "41251",
         count: "10",
         price: "900",
+      },
+      {
+        id: 5,
+        date: "19.01.2023",
+        name: "Апельсины",
+        code: "41951",
+        count: "10",
+        price: "770",
       },
     ],
   }),

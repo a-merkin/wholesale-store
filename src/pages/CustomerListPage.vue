@@ -5,6 +5,17 @@
       <el-table-column prop="inn" label="ИНН" />
       <el-table-column prop="kpp" label="КПП" />
       <el-table-column prop="ogrn" label="ОГРН" />
+      <el-table-column label="Покупки" width="180">
+        <template #default="scope">
+          <div>
+            {{
+              scope.row.purchases
+                .map((purchaseIndex) => store.purchases[purchaseIndex].name)
+                .join(", ")
+            }}
+          </div>
+        </template>
+      </el-table-column>
       <el-table-column fixed="right" width="180">
         <template #default="scope">
           <el-button
