@@ -7,6 +7,19 @@
     <el-input placeholder="ИНН" v-model="customer.inn"></el-input>
     <el-input placeholder="КПП" v-model="customer.kpp"></el-input>
     <el-input placeholder="ОГРН" v-model="customer.ogrn"></el-input>
+    <el-select
+      v-model="customer.purchases"
+      multiple
+      placeholder="Select"
+      style="width: 240px"
+    >
+      <el-option
+        v-for="(purchase, index) in store.purchases"
+        :key="index"
+        :label="purchase.name"
+        :value="index"
+      />
+    </el-select>
     <el-button type="primary" @click="saveCustomer">Сохранить</el-button>
   </el-container>
 </template>
