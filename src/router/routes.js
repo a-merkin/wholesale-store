@@ -22,6 +22,16 @@ const routes = [
       },
       { path: "/purchase/:id", name: "Purchase", component: PurchasePage },
       { path: "/customer/:id", name: "Customer", component: CustomerPage },
+      {
+        path: "/create-customer",
+        name: "CustomerCreate",
+        component: CustomerPage,
+      },
+      {
+        path: "/create-purchase",
+        name: "PurchaseCreate",
+        component: PurchasePage,
+      },
     ],
   },
 ];

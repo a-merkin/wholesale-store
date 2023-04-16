@@ -16,9 +16,7 @@
           >
             Изменить
           </el-button>
-          <el-popconfirm
-            title="Вы уверены?"
-            @confirm="deleteRow(scope.$index)"
+          <el-popconfirm title="Вы уверены?" @confirm="deleteRow(scope.$index)"
             ><template #reference
               ><el-button link type="primary" size="small">
                 Удалить
@@ -33,9 +31,13 @@
 
 <script setup>
 import { useStore } from "@/store.js";
+import router from "@/router/index.js";
 
 const store = useStore();
 
+const changeRow = (index) => {
+  router.push(`/purchase/${index}`);
+};
 const deleteRow = (index) => {
   store.deletePurchase(index);
 };

@@ -68,23 +68,28 @@ export const useStore = defineStore("store", {
     ],
   }),
   actions: {
-    addPurchase(purchase) {
+    createPurchase(purchase) {
       this.purchases.push(purchase);
     },
-    changePurchase() {},
+    changePurchase(id, purchase) {
+      this.purchases[id] = purchase;
+    },
     deletePurchase(index) {
       this.purchases.splice(index, 1);
     },
 
-    addCustomer(customer) {
+    createCustomer(customer) {
       this.customers.push(customer);
     },
-    changeCustomer() {},
+    changeCustomer(id, customer) {
+      this.customers[id] = customer;
+    },
     deleteCustomer(index) {
       this.customers.splice(index, 1);
     },
+
     getPurchaseById(id) {
-      return this.customers[id];
+      return this.purchases[id];
     },
     getCustomerById(id) {
       return this.customers[id];
