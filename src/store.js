@@ -4,24 +4,28 @@ export const useStore = defineStore("store", {
   state: () => ({
     customers: [
       {
+        id: 1,
         name: "Иванов Иван Иванович",
         inn: "1232131231",
         kpp: "12313123123",
         ogrn: "123123213",
       },
       {
+        id: 2,
         name: "Кеков Кек Кекович",
         inn: "1232131231",
         kpp: "12313123123",
         ogrn: "123123213",
       },
       {
+        id: 3,
         name: "Карабас Барабас Барабасов",
         inn: "1232131231",
         kpp: "12313123123",
         ogrn: "123123213",
       },
       {
+        id: 4,
         name: "Акакий Акак Акакиевич",
         inn: "1232131231",
         kpp: "12313123123",
@@ -30,6 +34,7 @@ export const useStore = defineStore("store", {
     ],
     purchases: [
       {
+        id: 1,
         date: "01.01.2023",
         name: "Гречка",
         code: "21232",
@@ -37,6 +42,7 @@ export const useStore = defineStore("store", {
         price: "12333",
       },
       {
+        id: 2,
         date: "03.01.2023",
         name: "Макароны",
         code: "11211",
@@ -44,6 +50,7 @@ export const useStore = defineStore("store", {
         price: "12333",
       },
       {
+        id: 3,
         date: "06.01.2023",
         name: "Паштет",
         code: "31241",
@@ -51,6 +58,7 @@ export const useStore = defineStore("store", {
         price: "10000",
       },
       {
+        id: 4,
         date: "11.01.2023",
         name: "Колбаса",
         code: "41251",
@@ -73,7 +81,13 @@ export const useStore = defineStore("store", {
     },
     changeCustomer() {},
     deleteCustomer(index) {
-      this.customer.splice(index, 1);
+      this.customers.splice(index, 1);
+    },
+    getPurchaseById(id) {
+      return this.customers[id];
+    },
+    getCustomerById(id) {
+      return this.customers[id];
     },
   },
 });

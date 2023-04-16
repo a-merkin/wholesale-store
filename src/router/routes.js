@@ -1,5 +1,7 @@
 import CustomerListPage from "@/pages/CustomerListPage.vue";
 import PurchaseListPage from "@/pages/PurchaseListPage.vue";
+import PurchasePage from "@/pages/PurchasePage.vue";
+import CustomerPage from "@/pages/CustomerPage.vue";
 import MainPage from "@/pages/MainPage.vue";
 
 const routes = [
@@ -18,6 +20,8 @@ const routes = [
         name: "PurchaseList",
         component: PurchaseListPage,
       },
+      { path: "/purchase/:id", name: "Purchase", component: PurchasePage },
+      { path: "/customer/:id", name: "Customer", component: CustomerPage },
     ],
   },
 ];

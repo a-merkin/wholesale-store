@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-table :data="customers">
+    <el-table :data="store.customers">
       <el-table-column prop="name" label="Имя" />
       <el-table-column prop="inn" label="ИНН" />
       <el-table-column prop="kpp" label="КПП" />
@@ -15,14 +15,13 @@
           >
             Изменить
           </el-button>
-          <el-button
-            link
-            type="primary"
-            size="small"
-            @click.prevent="deleteRow(scope.$index)"
+          <el-popconfirm title="Вы уверены?" @confirm="deleteRow(scope.$index)"
+            ><template #reference
+              ><el-button link type="primary" size="small">
+                Удалить
+              </el-button></template
+            ></el-popconfirm
           >
-            Удалить
-          </el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -30,10 +29,16 @@
 </template>
 
 <script setup>
-const changeRow = () => {};
+import { useStore } from "@/store.js";
+import router from "@/router/index.js";
 
+const store = useStore();
+
+const changeRow = (index) => {
+  router.push(`/customer/${index}`);
+};
 const deleteRow = (index) => {
-  customers.value.splice(index, 1);
+  store.deleteCustomer(index);
 };
 </script>
 

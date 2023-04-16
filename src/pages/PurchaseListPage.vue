@@ -16,14 +16,15 @@
           >
             Изменить
           </el-button>
-          <el-button
-            link
-            type="primary"
-            size="small"
-            @click.prevent="deleteRow(scope.$index)"
+          <el-popconfirm
+            title="Вы уверены?"
+            @confirm="deleteRow(scope.$index)"
+            ><template #reference
+              ><el-button link type="primary" size="small">
+                Удалить
+              </el-button></template
+            ></el-popconfirm
           >
-            Удалить
-          </el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -34,6 +35,10 @@
 import { useStore } from "@/store.js";
 
 const store = useStore();
+
+const deleteRow = (index) => {
+  store.deletePurchase(index);
+};
 </script>
 
 <style lang="scss" scoped></style>
