@@ -21,7 +21,7 @@ export const useStore = defineStore("store", {
       },
       {
         id: 3,
-        name: "Карабас Барабас Барабасов",
+        name: "Карабас Барабас",
         inn: "1232131231",
         kpp: "12313123123",
         ogrn: "123123213",
