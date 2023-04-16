@@ -17,10 +17,12 @@
 body {
   height: 100vh;
   width: 100%;
-  background: #F1F1F1;
+  background: #f1f1f1;
+  margin: 0;
 }
 
 #app {
   height: 100%;
   width: 100%;
 }
+

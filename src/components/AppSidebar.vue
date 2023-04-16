@@ -2,13 +2,13 @@
   <el-menu
     default-active="1"
     :collapse="isCollapse"
-    style="height: 100%; width: 288px"
+    style="height: 100%; width: 200px"
   >
-    <el-menu-item index="2" @click="handleRoute('/customer-list')">
+    <el-menu-item index="1" @click="handleRoute('/customer-list')">
       <el-icon><IconHome /></el-icon>
       <template #title>Клиенты</template>
     </el-menu-item>
-    <el-menu-item index="3" @click="handleRoute('/purchase-list')">
+    <el-menu-item index="2" @click="handleRoute('/purchase-list')">
       <el-icon><IconTasks /></el-icon>
       <template #title>Покупки</template>
     </el-menu-item>
