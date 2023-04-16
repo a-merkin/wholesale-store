@@ -1,4 +1,5 @@
 class CustomerModel {
+  name = "";
   inn = "";
   kpp = "";
   ogrn = "";

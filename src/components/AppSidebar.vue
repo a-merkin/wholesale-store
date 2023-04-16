@@ -4,11 +4,11 @@
     :collapse="isCollapse"
     style="height: 100%; width: 288px"
   >
-    <el-menu-item index="2" @click="handleRoute('/home')">
+    <el-menu-item index="2" @click="handleRoute('/customer-list')">
       <el-icon><IconHome /></el-icon>
       <template #title>Клиенты</template>
     </el-menu-item>
-    <el-menu-item index="3" @click="handleRoute('/trips-list')">
+    <el-menu-item index="3" @click="handleRoute('/purchase-list')">
       <el-icon><IconTasks /></el-icon>
       <template #title>Покупки</template>
     </el-menu-item>
