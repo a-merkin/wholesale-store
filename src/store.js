@@ -39,7 +39,7 @@ export const useStore = defineStore("store", {
     purchases: [
       {
         id: 1,
-        date: "01.01.2023",
+        date: "2023-04-07",
         name: "Гречка",
         code: "21232",
         count: "4444",
@@ -47,7 +47,7 @@ export const useStore = defineStore("store", {
       },
       {
         id: 2,
-        date: "03.01.2023",
+        date: "2023-04-12",
         name: "Макароны",
         code: "11211",
         count: "241",
@@ -55,7 +55,7 @@ export const useStore = defineStore("store", {
       },
       {
         id: 3,
-        date: "06.01.2023",
+        date: "2023-02-07",
         name: "Паштет",
         code: "31241",
         count: "100",
@@ -63,7 +63,7 @@ export const useStore = defineStore("store", {
       },
       {
         id: 4,
-        date: "11.01.2023",
+        date: "2023-03-21",
         name: "Колбаса",
         code: "41251",
         count: "10",
@@ -71,7 +71,7 @@ export const useStore = defineStore("store", {
       },
       {
         id: 5,
-        date: "19.01.2023",
+        date: "2023-04-10",
         name: "Апельсины",
         code: "41951",
         count: "10",

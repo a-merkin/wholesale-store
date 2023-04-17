@@ -7,7 +7,9 @@
       padding: 10px 60px;
     "
   >
-    <el-button type="primary" @click="createEl()">Создать</el-button>
+    <el-button type="primary" @click="createEl()"
+      >Добавить {{ itemTitleVariables[route.name] }}</el-button
+    >
   </el-container>
 </template>
 
@@ -17,10 +19,12 @@ import { useRoute } from "vue-router";
 
 const route = useRoute();
 
-console.log(route.name);
+const itemTitleVariables = {
+  CustomerList: "клиента",
+  PurchaseList: "покупку",
+};
 
 const createEl = () => {
-  console.log(route.name);
   const variables = {
     CustomerList: "CustomerCreate",
     PurchaseList: "PurchaseCreate",
